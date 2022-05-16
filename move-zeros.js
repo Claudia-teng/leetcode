@@ -16,7 +16,8 @@ var moveZeroes = function(nums) {
 };
 
 // version
-// use the pointer to save index of first 0
+// use the pointer to save the index of first 0
+// if pointer and i are different, swap them
 
 var moveZeroes = function(nums) {
   let pointer = 0;
