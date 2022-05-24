@@ -16,3 +16,26 @@ var reverseString = function(s) {
     s[s.length-1-i] = hold;
   }
 };
+
+// version 3
+
+var reverseString = function(s) {
+  let reversed = [];
+  let arrayS = s.split('');
+  for (let i=0; i<s.length; i++) {
+    reversed.push(arrayS.pop());
+  }
+  return reversed.join('');
+};
+
+// version 4 
+// recursive
+// str.charAt(0) will be kept in that scope
+
+function reverseStringRecursive (str) {
+  if (str === "") {
+    return "";
+  } else {
+    return reverseStringRecursive(str.substr(1)) + str.charAt(0);
+  }
+}
