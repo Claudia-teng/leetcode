@@ -1,6 +1,6 @@
 // version 1
 // brute force
-// time limit exceed
+// time limit exceeds
 // O(n * k) runtime complexity
 
 var rotate = function(nums, k) {
