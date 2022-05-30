@@ -23,7 +23,7 @@ var solution = function(isBadVersion) {
   };
 };
 
-// version 1
+// version 2
 // iterative
 
 var solution = function(isBadVersion) {
