@@ -4,7 +4,6 @@
 // version 1
 // randomly pick one index from origin and add it to shuffled array
 // O(n^2) runtime complexity
-// O(n) space complexity
 
 /**
  * @param {number[]} nums
@@ -36,10 +35,9 @@ Solution.prototype.shuffle = function() {
 };
 
 // version 2
-// in-place shuffle
+// Fisher–Yates Shuffle (in-place shuffle)
 // shuffle from the last index, pick an index and swap it with the last index
 // O(n) runtime complexity
-// O(n) space complexity 
 
 /**
  * @param {number[]} nums
