@@ -1,4 +1,5 @@
 // version 1
+// O(n^2) runtime complexity
 
 var removeDuplicates = function(nums) {
   let current;
@@ -27,3 +28,18 @@ var removeDuplicates = function(nums) {
   return nums.length;
 };
 
+// version 2
+// use a variable to remember the index that should be swapped
+// finally index is the total of non-repeating nums
+// O(n) runtime complexity
+
+var removeDuplicates = function(nums) {
+  let index = 1;
+  for (let i=1; i<nums.length; i++) {
+    if (nums[i] !== nums[i-1]) {
+      nums[index] = nums[i];
+      index++;
+    }
+  }
+  return index;
+};
