@@ -24,7 +24,7 @@ var rotate = function(nums, k) {
 // version 3
 // O(n) runtime complexity & O(1) space complexity
 
-var rotate= function(nums, k) {
+var rotate = function(nums, k) {
 
   function reverse(arr, start, end) {
     while (start < end) {
@@ -43,6 +43,4 @@ var rotate= function(nums, k) {
   reverse(nums, 0, (k - 1));
   // reverse from k to the end
   reverse(nums, k, (nums.length - 1));
-
-  return nums;
 }
