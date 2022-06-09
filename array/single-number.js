@@ -1,5 +1,5 @@
 // version 1
-// use the first one to compare with the rest of the array
+// remove itself and compare with the rest of the array
 // O(n^2) runtime complexity
 
 var singleNumber = function(nums) {
