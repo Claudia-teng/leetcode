@@ -17,7 +17,7 @@ var moveZeroes = function(nums) {
 };
 
 // version
-// pointer points to non-zero element
+// use the pointer to save the index of first 0
 // if pointer and i are different, swap them
 // O(n) runtime complexity
 
