@@ -1,6 +1,7 @@
 // version 1
 // use length to fix the loop times
 // use index to specify the num to be checked
+// O(n^2) runtime complexity
 
 var moveZeroes = function(nums) {
   let index = 0;
@@ -16,8 +17,9 @@ var moveZeroes = function(nums) {
 };
 
 // version
-// use the pointer to save the index of first 0
+// pointer points to non-zero element
 // if pointer and i are different, swap them
+// O(n) runtime complexity
 
 var moveZeroes = function(nums) {
   let pointer = 0;
