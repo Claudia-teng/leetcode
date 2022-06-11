@@ -54,9 +54,9 @@ var isValidSudoku = function(board) {
 
 var isValidSudoku = function(board) {
   // create an empty set for each row/col/square
-  const rowRules = new Array(9).fill(new Set());
-  const colRules = new Array(9).fill(new Set());
-  const mixedRules = new Array(9).fill(new Set());
+  const rowRules = new Array(9).fill().map(() => new Set());
+  const colRules = new Array(9).fill().map(() => new Set());
+  const mixedRules = new Array(9).fill().map(() => new Set());
   
   // iterate through each cell on the board
   for (let row = 0; row < 9; row++) {
@@ -69,18 +69,18 @@ var isValidSudoku = function(board) {
       if (curr === ".") continue  // ignore dots
       
       // if the current number already exists in the set, board is invalid
-      const a = rowRules[row].has(curr)
-      const b = colRules[col].has(curr)
-      const c = mixedRules[mixedIdx].has(curr)
-      if (a || b || c) return false
+      const a = rowRules[row].has(curr);
+      const b = colRules[col].has(curr);
+      const c = mixedRules[mixedIdx].has(curr);
+      if (a || b || c) return false;
       
       // add the number to the appropriate set
-      rowRules[row].add(curr)
-      colRules[col].add(curr)
-      mixedRules[mixedIdx].add(curr)
+      rowRules[row].add(curr);
+      colRules[col].add(curr);
+      mixedRules[mixedIdx].add(curr);
     }
   }
   
   // all checks out
-  return true
+  return true;
 };
