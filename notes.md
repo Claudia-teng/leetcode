@@ -21,3 +21,7 @@ let arr = [...array];
 arr.splice(index, 1);
 ```
 
+## reverse
+
+Array (O)
+String (X)

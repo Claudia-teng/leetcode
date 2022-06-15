@@ -24,7 +24,7 @@ var isAnagram = function(s, t) {
 };
 
 // version 2
-// (better) another way to handle different lengths of s and t
+// handle different lengths of s and t first
 
 var isAnagram = function(s, t) {
   let ht = {}
