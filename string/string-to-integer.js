@@ -44,23 +44,23 @@ var myAtoi = function(s) {
   if (isNaN(Number(s[0]))) {
       return 0;
   } else {
-      for (let i=0; i<s.length; i++) {
-          if (s[i] !== " " && !isNaN(Number(s[i]))) {
-              newS += s[i];
-          } else {
-              break;
-          }
+    for (let i=0; i<s.length; i++) {
+      if (s[i] !== " " && !isNaN(Number(s[i]))) {
+        newS += s[i];
+      } else {
+        break;
       }
+    }
   }
       
   // range
   let result = negative ? -Number(newS) : Number(newS);
   if (result > Math.pow(2, 31)-1) {
-      return Math.pow(2, 31)-1;
+    return Math.pow(2, 31)-1;
   } else if (result < -Math.pow(2, 31)) {
-      return -Math.pow(2, 31);
+    return -Math.pow(2, 31);
   } else {
-      return result;
+    return result;
   }
       
 }
