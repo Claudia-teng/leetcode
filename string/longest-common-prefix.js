@@ -1,6 +1,6 @@
 // version 1
 // use the first word as sample, then compare every letter
-// O(n^3) runtime complexity
+// O(n^2) runtime complexity
 
 var longestCommonPrefix = function(strs) {
   let first = strs[0];
