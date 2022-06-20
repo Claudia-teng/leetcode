@@ -47,7 +47,7 @@ var isPalindrome = function(head) {
 
 // version 3
 // 1. find the middle point 
-// (fast goes 2 step, slow goes one step, when fast / fast.next is null, slow must be the middle point)
+// (fast goes 2 steps, slow goes 1 step, when fast / fast.next is null, slow must be the middle point)
 // 2. reverse the second half
 // 3. check if it is palindrome
 // O(n) runtime complexity
@@ -82,7 +82,7 @@ var isPalindrome = function(head) {
   }
 
   // check if it is palindrome
-  // note: do not use slow here as its value has ben changed
+  // note: do not use slow here as its value has been changed
   while (prev) {
     if (head.val !== prev.val) return false;
     head = head.next;
