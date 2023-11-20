@@ -8,25 +8,25 @@
 /**
  * @param {number[]} nums
  */
-var Solution = function(nums) {
+var Solution = function (nums) {
   this.array = nums;
 };
 
 /**
-* @return {number[]}
-*/
-Solution.prototype.reset = function() {
-  return this.array;  
+ * @return {number[]}
+ */
+Solution.prototype.reset = function () {
+  return this.array;
 };
 
 /**
-* @return {number[]}
-*/
-Solution.prototype.shuffle = function() {
+ * @return {number[]}
+ */
+Solution.prototype.shuffle = function () {
   let origin = [...this.array];
   let shuffled = [];
-  
-  while(origin.length > 0){
+
+  while (origin.length > 0) {
     let index = Math.floor(Math.random() * origin.length);
     shuffled.push(origin[index]);
     origin.splice(index, 1);
@@ -42,27 +42,30 @@ Solution.prototype.shuffle = function() {
 /**
  * @param {number[]} nums
  */
-var Solution = function(nums) {
+var Solution = function (nums) {
   this.array = nums;
 };
 
 /**
-* @return {number[]}
-*/
-Solution.prototype.reset = function() {
-  return this.array;  
+ * @return {number[]}
+ */
+Solution.prototype.reset = function () {
+  return this.array;
 };
 
 /**
-* @return {number[]}
-*/
-Solution.prototype.shuffle = function() {
+ * @return {number[]}
+ */
+Solution.prototype.shuffle = function () {
   let array = [...this.array];
-  let currentIndex = array.length-1;
-  
+  let currentIndex = array.length - 1;
+
   while (currentIndex > 0) {
-    let ramdomIndex = Math.floor(Math.random() * (currentIndex+1));
-    [array[currentIndex], array[ramdomIndex]] = [array[ramdomIndex], array[currentIndex]];
+    let ramdomIndex = Math.floor(Math.random() * (currentIndex + 1));
+    [array[currentIndex], array[ramdomIndex]] = [
+      array[ramdomIndex],
+      array[currentIndex],
+    ];
     currentIndex--;
   }
   return array;

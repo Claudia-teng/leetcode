@@ -1,7 +1,7 @@
 // version 1
 // new Set()
 
-var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
   return new Set(nums).size !== nums.length ? true : false;
 };
 
@@ -10,11 +10,11 @@ var containsDuplicate = function(nums) {
 // O(n^2) runtime complexity
 // O(1) space complexity
 
-var containsDuplicate = function(nums) {
-  let ans = false
+var containsDuplicate = function (nums) {
+  let ans = false;
   nums.forEach((num, index, array) => {
     if (array.indexOf(num) !== index) ans = true;
-  })
+  });
   return ans;
 };
 
@@ -23,9 +23,9 @@ var containsDuplicate = function(nums) {
 // O(n^2) runtime complexity
 // O(1) space complexity
 
-var containsDuplicate = function(nums) {
-  for (let i=0; i<nums.length-1; i++) {
-    for (let j=i+1; j<nums.length; j++) {
+var containsDuplicate = function (nums) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] === nums[j]) {
         return true;
       }
@@ -39,10 +39,10 @@ var containsDuplicate = function(nums) {
 // O(n) runtime complexity
 // O(n) space complexity
 
-var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
   let map = {};
-  
-  for (let i=0; i<nums.length; i++) {
+
+  for (let i = 0; i < nums.length; i++) {
     let num = nums[i];
     if (!map[num]) {
       map[num] = true;

@@ -2,9 +2,9 @@
 // brute force
 // O(n^2) runtime complexity
 
-var twoSum = function(nums, target) {
-  for (let i=0; i<nums.length-1; i++) {
-    for (let j=i+1; j<nums.length; j++) {
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] === target) {
         return [i, j];
       }
@@ -18,18 +18,18 @@ var twoSum = function(nums, target) {
 // & check the goal num is itself (by index) (can not use a num twice)
 // O(n) runtime complexity
 
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
   let myMap = new Map();
-  for (let i=0; i<nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     myMap.set(nums[i], i);
   }
-  for (let i=0; i<nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     let goal = target - nums[i];
     if (myMap.has(goal) && myMap.get(goal) !== i) {
       return [myMap.get(goal), i];
     }
   }
-}
+};
 
 // Note 1:
 // I use let ht = {} first to create a hash table
@@ -51,14 +51,14 @@ var twoSum = function(nums, target) {
 // yes -> return indices
 // O(n) runtime complexity
 
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
   let ht = {};
-  for (let i=0; i<nums.length; i++) {
-    let goal = target-nums[i];
+  for (let i = 0; i < nums.length; i++) {
+    let goal = target - nums[i];
     if (!ht[goal]) {
       ht[nums[i]] = String(i);
     } else {
       return [ht[goal], i];
     }
   }
-}
+};

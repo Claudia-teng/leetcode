@@ -1,9 +1,9 @@
 // version 1
 // O(n^2) runtime complexity
 
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
   let current;
-  for (let i=0; i<nums.length;) {
+  for (let i = 0; i < nums.length; ) {
     if (current !== nums[i]) {
       current = nums[i];
       i++;
@@ -17,9 +17,9 @@ var removeDuplicates = function(nums) {
 // version 2
 // replace "let current" to "nums[i-1]"
 
-var removeDuplicates = function(nums) {
-  for (let i=0; i<nums.length;) {
-    if (nums[i-1] !== nums[i]) {
+var removeDuplicates = function (nums) {
+  for (let i = 0; i < nums.length; ) {
+    if (nums[i - 1] !== nums[i]) {
       i++;
     } else {
       nums.splice(i, 1);
@@ -33,10 +33,10 @@ var removeDuplicates = function(nums) {
 // finally index is the total of non-repeating nums
 // O(n) runtime complexity
 
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
   let index = 1;
-  for (let i=1; i<nums.length; i++) {
-    if (nums[i] !== nums[i-1]) {
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] !== nums[i - 1]) {
       nums[index] = nums[i];
       index++;
     }

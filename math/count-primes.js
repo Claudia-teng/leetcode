@@ -7,19 +7,19 @@
 // avoid expensive function sqrt(), so use i*i<=num
 // time limit exceeds
 
-var countPrimes = function(n) {
-  if (n===0) return 0;
-  if (n===1) return 0;
+var countPrimes = function (n) {
+  if (n === 0) return 0;
+  if (n === 1) return 0;
   let count = 0;
-  
-  for (let i=2; i<n; i++) {
+
+  for (let i = 2; i < n; i++) {
     if (isPrime(i)) count++;
   }
-  
+
   function isPrime(num) {
-    for (let i=2; i*i<=num; i++) {
-      if (num%i===0) return false;
-    } 
+    for (let i = 2; i * i <= num; i++) {
+      if (num % i === 0) return false;
+    }
     return true;
   }
   return count;
@@ -35,25 +35,25 @@ var countPrimes = function(n) {
 // O(n log (log n))  runtime complexity
 // O(n) space complexity
 
-var countPrimes = function(n) {
-  if (n===0) return 0;
-  if (n===1) return 0;
-  
+var countPrimes = function (n) {
+  if (n === 0) return 0;
+  if (n === 1) return 0;
+
   // make an array to keep track of every number's status
   let isPrimeArr = new Array(n).fill(true);
-  
+
   // similar to version 1 (2.)
-  for (let i=2; i*i<n; i++) {
+  for (let i = 2; i * i < n; i++) {
     // if num is marked off, ignore it
     if (!isPrimeArr[i]) continue;
     // start from i*i, and mark off all multiples of i
-    for (let j=i*i; j<n; j=j+i) {
+    for (let j = i * i; j < n; j = j + i) {
       isPrimeArr[j] = false;
     }
   }
-  
+
   let count = 0;
-  for (let i=2; i<n; i++) {
+  for (let i = 2; i < n; i++) {
     if (isPrimeArr[i]) count++;
   }
   return count;

@@ -1,11 +1,11 @@
 // version 1
 // use a flag to note the node that has been visited
 
-var hasCycle = function(head) {
+var hasCycle = function (head) {
   if (!head || !head.next) return false;
-  
+
   let curr = head;
-  
+
   while (curr) {
     if (curr.flag) {
       return true;
@@ -23,19 +23,19 @@ var hasCycle = function(head) {
 // if slow and fast meet, it is circular
 // floyd's tortoise and hare algorithm
 
-var hasCycle = function(head) {
+var hasCycle = function (head) {
   if (!head || !head.next) return false;
-  
+
   let slow = head.next;
   let fast = head.next.next;
-  
+
   while (fast && fast.next) {
     slow = slow.next;
     fast = fast.next.next;
-    
+
     // compare the same object (reference)
     if (slow === fast) return true;
   }
-  
+
   return false;
 };

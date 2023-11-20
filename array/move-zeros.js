@@ -3,15 +3,15 @@
 // use index to specify the num to be checked
 // O(n^2) runtime complexity
 
-var moveZeroes = function(nums) {
+var moveZeroes = function (nums) {
   let index = 0;
   const length = nums.length;
-  for (let i=0; i<length; i++) {
+  for (let i = 0; i < length; i++) {
     if (nums[index] === 0) {
       nums.splice(index, 1);
       nums.push(0);
     } else {
-      index++
+      index++;
     }
   }
 };
@@ -21,7 +21,7 @@ var moveZeroes = function(nums) {
 // if pointer and i are different, swap them
 // O(n) runtime complexity
 
-var moveZeroes = function(nums) {
+var moveZeroes = function (nums) {
   let pointer = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
