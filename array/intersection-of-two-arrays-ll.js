@@ -23,7 +23,7 @@ var intersect = function (nums1, nums2) {
 // key(num): value(count)
 // iterate nums2, when same num is found: push to ans & minus count
 // O(a+b) runtime complexity
-// O(min(a, b)) space complexity
+// O(max(a, b)) space complexity
 
 var intersect = function (nums1, nums2) {
   let store, array;
@@ -57,6 +57,8 @@ var intersect = function (nums1, nums2) {
 // === -> p1 + 1, p2 + 1, push
 // p1 > p2 -> p2 + 1
 // p1 < p2 -> p1 + 1
+// O(aloga + blogb) runtime complexity (sort)
+// O(min(n, m)) (no extra space for nums1 & nums2, so it's "ans")
 
 var intersect = function (nums1, nums2) {
   nums1 = nums1.sort((a, b) => a - b);
